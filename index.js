@@ -3,7 +3,7 @@ const listContainer = document.getElementById("list-container");
 
 function addTask() {
     if(inputBox.value === ''){
-        alert("Нужно что написать");
+        alert("Нужно что-то написать");
     }
     else{
         let li = document.createElement("li");
