@@ -66,11 +66,14 @@
 ul li {
     list-style: none;
     font-size: 17px;
-    padding: 16px 8px 12px 50px;
+    padding: 16px 40px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
+    overflow-wrap: break-word;
 }
+
+
 
 ul li::before {
     content: '';
