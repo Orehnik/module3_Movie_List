@@ -2,12 +2,13 @@ const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
 function addTask() {
-    if(inputBox.value === ''){
+    let inputText = inputBox.value.trim();
+    if(!inputText){
         alert("Нужно что-то написать");
     }
     else{
         let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
+        li.innerHTML = inputBox.value.trim();
         listContainer.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7"
@@ -16,6 +17,7 @@ function addTask() {
     inputBox.value = "";
     saveData ();
 }
+
 
 listContainer.addEventListener("click", function (e) {
     if(e.target.tagName === "LI"){
